@@ -57,17 +57,4 @@ async def change_user_info(user_id: int = Body(...),
     return {'status': 1, 'data': result}
 
 
-# Заблокировать пользователя
-@user_router.post('/block-user')
-async def block_user(user_id: int):
-    result = block_user_db(user_id)
 
-    return {'status': 1, 'data': result}
-
-
-# Разблокировать пользователя
-@user_router.delete('/unblock-user')
-async def unblock_user(user_id: int):
-    result = unblock_user_db(user_id)
-
-    return {'status': 1, 'data': result}

@@ -42,6 +42,6 @@ async def get_all_hotels(user_id: int):
 
 # Вывод определённого отеля пользователя
 @hotel_router.get('/get-exact-hotel')
-async def get_exact_hotel(user_id: int, hotel_id: str):
+async def get_exact_hotel(user_id: int, hotel_id: int):
     result = get_exact_user_hotel_db(user_id, hotel_id)
     return {'status': 1, 'data': result}

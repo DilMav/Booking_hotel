@@ -10,6 +10,7 @@ class RegisterBookingModel(BaseModel):
     price_per_day: int
     total_days: int
     total_cost: int
+    booking_id: int
     room_id: int
     user_id: int
 
@@ -17,6 +18,9 @@ class RegisterBookingModel(BaseModel):
 # Модель отображения бронирования пользователя
 class BookingUserModel(BaseModel):
     id: int
+    name: str
+    description: str
+    services: str
     date_from: date
     date_to: date
     price_per_day: int
@@ -24,7 +28,6 @@ class BookingUserModel(BaseModel):
     total_cost: int
     user_id: int
     room_id: int
-    name: str
-    description: str
-    services: str
     image_id: str
+
+

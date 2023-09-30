@@ -48,6 +48,6 @@ def get_all_user_hotels_db(user_id: int):
 def get_exact_user_hotel_db(user_id: int, hotel_id: int):
     db = next(get_db())
 
-    exact_hotel = db.query(Hotel).filter_by(user_id=user_id, id=room_id).first()
+    exact_hotel = db.query(Hotel).filter_by(user_id=user_id, hotel_id=hotel_id, id=room_id).first()
 
     return exact_hotel
