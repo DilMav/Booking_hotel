@@ -7,7 +7,7 @@ from database.bookingservice import \
     add_new_booking_db, \
     delete_exact_booking_db
 
-booking_router = APIRouter(prefix='/bookings', tags=['Бронирования'])
+booking_router = APIRouter(prefix='/bookings', tags=['Работа с бронированиями'])
 
 
 # Добавить бронирование
