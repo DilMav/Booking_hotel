@@ -2,7 +2,7 @@ from fastapi import APIRouter, Body, UploadFile
 
 from user import UserRegisterModel
 from database.userservice import (register_user_db, block_user_db, unblock_user_db,
-                                  change_user_info_db, check_user_db, add_profile_photo_db)
+                                  change_user_info_db, check_user_db)
 
 
 user_router = APIRouter(prefix='/user', tags=['Работа с пользователями'])

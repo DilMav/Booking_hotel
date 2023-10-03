@@ -1,7 +1,6 @@
 from fastapi import APIRouter
 
-
-from hotel import RegisterBookingdModel
+from booking import RegisterBookingModel
 from database.bookingservice import \
     get_all_user_bookings_db, \
     get_exact_user_booking_db, \
@@ -27,7 +26,6 @@ async def add_new_booking(data: RegisterBookingModel):
 @booking_router.delete('/delete-booking')
 async def delete_exact_booking(user_id: int, booking_id: int):
     result = delete_exact_booking_db(user_id, booking_id)
-
     return {'status': 1, 'data': result}
 
 

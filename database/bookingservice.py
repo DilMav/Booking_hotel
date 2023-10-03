@@ -12,7 +12,7 @@ def add_new_booking_db(booking_data: RegisterBookingModel):
 
     booking_info = booking_data.model_dump()
 
-    new_booking = Hotel(reg_date=datetime.now(), **hotel_info)
+    new_booking = Booking(reg_date=datetime.now(), **booking_info)
 
     db.add(new_booking)
     db.commit()
@@ -21,7 +21,7 @@ def add_new_booking_db(booking_data: RegisterBookingModel):
 
 
 # Удалить определённое бронирование
-def delete_exact_booking_db(user_id: int, booking_id: str):
+def delete_exact_booking_db(user_id: int, booking_id: int):
     db = next(get_db())
 
     exact_booking = db.query(Booking).filter_by(user_id=user_id, id=booking_id).first()

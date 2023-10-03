@@ -1,12 +1,11 @@
-from datetime import datetime
 from pydantic import BaseModel
 
 
 # Модель отображения бронирования
 class RegisterBookingModel(BaseModel):
     id: int
-    date_from: date
-    date_to: date
+    date_from: int
+    date_to: int
     price_per_day: int
     total_days: int
     total_cost: int
@@ -21,8 +20,8 @@ class BookingUserModel(BaseModel):
     name: str
     description: str
     services: str
-    date_from: date
-    date_to: date
+    date_from: int
+    date_to: int
     price_per_day: int
     total_days: int
     total_cost: int

@@ -1,8 +1,9 @@
 from fastapi import APIRouter
-from room import RoomModel
+
+from room import RegisterRoomModel
 from database.roomservice import \
-    get_exact_hotel_db, \
-    get_all_hotels_monitor_db, \
+    get_exact_user_room_db, \
+    get_all_user_rooms_db,\
     add_new_room_db
 
 room_router = APIRouter(prefix='/room', tags=['Работа с номерами'])

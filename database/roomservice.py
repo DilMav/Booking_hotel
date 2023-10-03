@@ -2,7 +2,7 @@ from datetime import datetime
 
 from database import get_db
 from database.models import Room, Hotel
-from Rooms import RegisterRoomModel
+from room import RegisterRoomModel
 
 
 # Добавить комнату
@@ -40,7 +40,7 @@ def get_all_user_rooms_db(user_id: int):
 
     exact_room = db.query(Room).filter_by(user_id=user_id).all()
 
-    return all_rooms
+    return exact_room
 
 
 # Вывести определённый номер пользователя

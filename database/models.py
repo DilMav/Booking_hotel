@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, Column, BigInteger, Integer, String, Float, DateTime, Boolean, ForeignKey
+from sqlalchemy import JSON, Column, BigInteger, Integer, String, Float, DateTime, Boolean, ForeignKey, Date
 from sqlalchemy.orm import relationship
 from sqlalchemy import Computed
 
@@ -50,8 +50,9 @@ class Hotel(Base):
 class Room(Base):
     __tablename__ = 'rooms'
 
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(length=150), nullable=False)
-    description = Сolumn(String(length=500), nullable=True)
+    description = Column(String(length=500), nullable=True)
     price_per_day = Column(Integer, nullable=False)
     services = Column(JSON, nullable=False)
     quantity = Column(Integer, nullable=False)
@@ -72,7 +73,7 @@ class Room(Base):
 class Booking(Base):
     __tablename__ = 'bookings'
 
-    id = Сolumn(Integer, primary_key=True, nullable=False)
+    id = Column(Integer, primary_key=True, nullable=False)
     date_from = Column(Date, nullable=False)
     date_to = Column(Date, nullable=False)
     price_per_day = Column(Integer, nullable=False)

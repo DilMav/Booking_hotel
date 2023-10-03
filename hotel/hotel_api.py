@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 
-from hotel import RegisterCardModel
+from hotel import RegisterHotelModel
 from database.hotelservice import \
     get_all_user_hotels_db, \
     get_exact_user_hotel_db, \
