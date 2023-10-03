@@ -82,7 +82,7 @@ class Booking(Base):
     room_id = Column(ForeignKey('rooms.id'))
     user_id = Column(ForeignKey('users.id'))
 
-    user_fk = relationship('User', lazy='subquery')
+    user_fk = relationship('User', lazy='subquery', overlaps="user_fk")
     room_fk = relationship('Room',  lazy='subquery', overlaps="booking_fk")
 
     def __str__(self):

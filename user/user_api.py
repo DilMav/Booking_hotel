@@ -55,6 +55,3 @@ async def change_user_info(user_id: int = Body(...),
     result = change_user_info_db(user_id, info_to_change, new_info)
 
     return {'status': 1, 'data': result}
-
-
-
