@@ -38,9 +38,9 @@ def delete_exact_room_db(user_id: int, room_id: int):
 def get_all_user_rooms_db(user_id: int):
     db = next(get_db())
 
-    exact_room = db.query(Room).filter_by(user_id=user_id).all()
+    all_rooms = db.query(Room).filter_by(user_id=user_id).all()
 
-    return exact_room
+    return all_rooms
 
 
 # Вывести определённый номер пользователя

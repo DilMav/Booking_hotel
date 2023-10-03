@@ -32,7 +32,7 @@ async def delete_exact_booking(user_id: int, booking_id: int):
 # Вывод всех бронирований пользователя
 @booking_router.get('/get-all-user-bookings')
 async def get_all_bookings(user_id: int):
-    result = get_all_user_booking_db(user_id)
+    result = get_all_user_bookings_db(user_id)
 
     return {'status': 1, 'data': result}
 
