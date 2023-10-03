@@ -26,7 +26,7 @@ async def add_new_hotel(data: RegisterHotelModel):
 
 # Удалить отель пользователя
 @hotel_router.delete('/delete-hotel')
-async def delete_exact_hotel(user_id: int, hotel_id: str):
+async def delete_exact_hotel(user_id: int, hotel_id: int):
     result = delete_exact_hotel_db(user_id, hotel_id)
 
     return {'status': 1, 'data': result}

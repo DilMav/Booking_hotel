@@ -21,7 +21,7 @@ def add_new_hotel_db(hotel_data: RegisterHotelModel):
 
 
 # Удалить определённый отель
-def delete_exact_hotel_db(user_id: int, hotel_id: str):
+def delete_exact_hotel_db(user_id: int, hotel_id: int):
     db = next(get_db())
 
     exact_hotel = db.query(Hotel).filter_by(user_id=user_id, id=hotel_id).first()
