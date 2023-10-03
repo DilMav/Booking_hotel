@@ -1,8 +1,7 @@
 from datetime import datetime
 
 from database import get_db
-from database.models import Booking
-
+from database.models import Booking, Hotel
 from booking import RegisterBookingModel
 
 
